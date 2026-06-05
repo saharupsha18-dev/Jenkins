@@ -5,7 +5,7 @@ FROM python:3.11-slim
 WORKDIR /app
 
 # Copy the Python script into the container
-COPY demo/my-code.py .
+COPY my-code.py .
 
 # Run the Python script
 CMD ["python", "my-code.py"]

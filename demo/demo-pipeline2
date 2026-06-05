@@ -26,5 +26,11 @@ pipeline {
                 '''
             }
         }
+
+       stage('Run Docker container') {
+           steps {
+               sh 'docker run --name my-jenkins-cont my-jenkins-demo'
+            }
+        }
     }
 }

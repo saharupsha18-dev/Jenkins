@@ -4,7 +4,12 @@ pipeline {
     nodejs 'NodeJS'
    }
   stages {
-    
+    stage('Check') {
+            steps {
+                sh 'node -v'
+                sh 'npm -v'
+            }
+        }
     stage("Checkout") {
       steps {
         checkout scm
